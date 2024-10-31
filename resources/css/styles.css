@@ -1,0 +1,19 @@
+nav {
+    border: 1px solid red;
+    display: flex;
+}
+
+nav .left_menu {
+    border: 1px solid lime;
+    flex:1;
+}
+
+nav .right_menu {
+    border: 1px solid blue;
+    flex:2;
+}
+
+ul.right_menu {
+    display: flex;
+    justify-content: space-around;
+}
