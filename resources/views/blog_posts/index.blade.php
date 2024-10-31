@@ -24,9 +24,10 @@
                     <td>{{ $post->subtitle }}</td>
                     <td>{{ $post->author_name }}</td>
                     <td>{{ $post->date->format('d M, Y') }}</td>
+                    <td><a href="{{ route('blog_posts.show', $post->id) }}" class="btn btn-info">View</a></td>
                     @auth
                     <td>
-                        <a href="{{ route('blog_posts.show', $post->id) }}" class="btn btn-info">View</a>
+                        
                         <a href="{{ route('blog_posts.edit', $post->id) }}" class="btn btn-warning">Edit</a>
                         <form action="{{ route('blog_posts.destroy', $post->id) }}" method="POST" style="display:inline;">
                             @csrf

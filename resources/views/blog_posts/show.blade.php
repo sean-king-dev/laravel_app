@@ -21,8 +21,10 @@
         @endif
     </div>
     <div>
-        @can('update', $post)
-            <a href="{{ route('blog_posts.edit', $post) }}">Edit</a>
-        @endcan
+        @auth
+            @can('update', $post)
+                <a href="{{ route('blog_posts.edit', $post) }}">Edit</a>
+            @endcan
+        @endauth
     </div>
 @endsection
